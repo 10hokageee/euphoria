@@ -1,0 +1,136 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.link {
+  transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+
+  &:hover {
+    color: #000;
+    font-size: 19px;
+  }
+}
+
+.title {
+  color: #3C4242;
+  @extend %poppins-600;
+  font-size: 34px;
+  line-height: 33.5px;
+  letter-spacing: 0.68px;
+  padding-left: 26px;
+  position: relative;
+  margin-bottom: 70px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    background: #8A33FD;
+    width: 6px;
+    height: 30px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.card {
+
+  &__img {
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+
+  &__name {
+    color: #3C4242;
+    @extend %poppins-700;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 0.2px;
+  }
+}
+
+.categories-card {
+  max-width: 270px;
+  position: relative;
+
+  &__img {
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    color: #2A2F2F;
+    @extend %poppins-700;
+    font-size: 17.875px;
+    line-height: 27.93px;
+    letter-spacing: -0.715px;
+    margin-bottom: 4px;
+    line-height: 15px;
+  }
+
+  &__info {
+    color: #7F7F7F;
+    @extend %poppins-500;
+    font-size: 13.407px;
+    line-height: 27.93px;
+    letter-spacing: -0.536px;
+  }
+
+  &__link {
+
+    & svg {
+      height: 13px;
+      width: 21px;
+      stroke-width: 1.676px;
+      stroke: #797979;
+    }
+  }
+
+  &__cost {
+    color: #3C4242;
+    @extend %poppins-700;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: #F6F6F6;
+  }
+
+  &__btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 27px;
+    right: 21px;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 1px;
+      stroke: #3C4242;
+      fill: transparent;
+    }
+  }
+}

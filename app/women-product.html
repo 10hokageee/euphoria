@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euphoria</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  
+<header class="header">
+  <div class="container">
+    <nav class="header__nav">
+      <a class="header__logo" href="#">
+        <img class="logo" src="images/logo.svg" alt="Logo">
+      </a>
+
+      <ul class="header__list">
+        <li class="header__list-item">
+          <a class="header__list-link link" href="#">Shop</a>
+        </li>
+        <li class="header__list-item">
+          <a class="header__list-link link" href="#">Men</a>
+        </li>
+        <li class="header__list-item">
+          <a class="header__list-link link" href="#">Women</a>
+        </li>
+        <li class="header__list-item">
+          <a class="header__list-link link" href="#">Combos</a>
+        </li>
+        <li class="header__list-item">
+          <a class="header__list-link link" href="#">Joggers</a>
+        </li>
+      </ul>  
+
+      <form class="header__form" action="#">
+        <label class="header__form-label">
+          <svg>
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          <input class="header__form-input" placeholder="Search" type="search">
+        </label>
+      </form>
+
+      <div class="header__user-nav">
+
+        <button class="header__user-btn" type="button">
+          <svg>
+            <use xlink:href="images/sprite.svg#heart"></use>
+          </svg>
+        </button>
+
+        <button class="header__user-btn" type="button">
+          <svg>
+            <use xlink:href="images/sprite.svg#user"></use>
+          </svg>
+        </button>
+
+        <button class="header__user-btn" type="button">
+          <svg>
+            <use xlink:href="images/sprite.svg#shopping-cart"></use>
+          </svg>
+        </button>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <section class="women-product">
+    <div class="container">
+      <div class="women-product__inner">
+         <div class="women-product__filters filters">
+
+          <div class="filter-wrapper">
+            <h3 class="filters__name filters__name1 filters__name--first" >Filter</h3>
+            <div class="filters__item filters__item1">
+              <ul class="filters__list filter-form">
+               <li class="filters__list-item">
+                 Tops
+               </li>
+               <li class="filters__list-item">
+                 Printed T-shirts
+               </li>
+               <li class="filters__list-item">
+                 Plain T-shirts
+               </li>
+               <li class="filters__list-item">
+                 Kurti
+               </li>
+               <li class="filters__list-item">
+                 Boxers
+               </li>
+               <li class="filters__list-item">
+                 Full sleeve T-shirts
+               </li>
+               <li class="filters__list-item">
+                 Joggers
+               </li>
+               <li class="filters__list-item">
+                 Payjamas
+               </li>
+               <li class="filters__list-item">
+                 Jeans
+               </li>
+              </ul>
+
+           </div>
+          </div>
+          
+
+           <div class="filter-wrapper">
+            <h3 class="filters__name filters__name2">Price</h3> 
+            <div class="filter-price filters__item2 filters__item">  
+                <form class="filter-price__form filter-form" action="#">
+                  <input class="filter-price__input" type="text"
+                  data-min="0"
+                  data-max="999"
+                  data-from="70"
+                  data-to="600">
+                  <label class="filter-price__label">
+                    <span class="filter-price__pref">$
+                     <span class="filter-price__cost filter-price__from"></span></span>
+  
+                     <span class="filter-price__pref">$
+                      <span class="filter-price__cost filter-price__to"></span>
+                     </span>
+  
+                  </label>
+                </form>
+  
+              </div>
+           </div>
+
+
+            <div class="filter-wrapper">
+              <h3 class="filters__name filters__name3">Colors</h3>
+              <div class="filter-colors filters__item3 filters__item">
+                  <form class="filter-colors__form filter-form" action="#">
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--purple"></span>
+                     </div>
+                     <span class="filter-colors__color">Purple</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--black"></span>
+                     </div>
+                     <span class="filter-colors__color">Black</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--red"></span>
+                     </div>
+                     <span class="filter-colors__color">Red</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--orange"></span>
+                     </div>
+                     <span class="filter-colors__color">Orange</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--navy"></span>
+                     </div>
+                     <span class="filter-colors__color">Navy</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--white"></span>
+                     </div>
+                     <span class="filter-colors__color">White</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--broom"></span>
+                     </div>
+                     <span class="filter-colors__color">Broom</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--green"></span>
+                     </div>
+                     <span class="filter-colors__color">Green</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--yellow"></span>
+                     </div>
+                     <span class="filter-colors__color">Yellow</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--grey"></span>
+                     </div>
+                     <span class="filter-colors__color">Grey</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--pink"></span>
+                     </div>
+                     <span class="filter-colors__color">Pink</span>
+                   </label>
+                   <label class="filter-colors__label">
+                     <div class="filter-colors__box">
+                       <input class="filter-colors__input" type="checkbox">
+                       <span class="filter-colors__checkbox filter-colors__checkbox--blue"></span>
+                     </div>
+                     <span class="filter-colors__color">Blue</span>
+                   </label>
+                  </form>
+               </div>
+            </div>
+
+           
+           <div class="filter-wrapper4">  
+            <h3 class="filters__name filters__name4">Size</h3>         
+            <div class="filters-size filters__item4 filters__item">
+              <form class="filters-size__form filter-form" action="#">
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">XXS</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">XL</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">XS</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">S</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">M</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">L</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">XXL</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">3XL</span>
+                  </div>
+                </label>
+                <label class="filters-size__label">
+                  <div class="filters-size__box">
+                    <input class="filters-size__input" type="checkbox">
+                    <span class="filters-size__checkbox">4XL</span>
+                  </div>
+                </label>
+              </form>
+           </div></div>
+
+
+           <div class="filter-wrapper">
+            <h3 class="filters__name filters__name5">Dress Style</h3>
+            <div class="filters-style filters__item filters__item5">
+                <ul class="filters-style__list filter-form">
+                  <li class="filters-style__item">
+                    Classic
+                  </li>
+                  <li class="filters-style__item">
+                    Casual
+                  </li>
+                  <li class="filters-style__item">
+                    Business
+                  </li>
+                  <li class="filters-style__item">
+                    Sport
+                  </li>
+                  <li class="filters-style__item">
+                    Elegant
+                  </li>
+                  <li class="filters-style__item">
+                    Formal (evening)
+                  </li>
+                </ul>
+             </div>
+           </div>
+         </div>
+
+         <div class="shop-card">
+            <div class="shop-card__wrapper">
+              <h2 class="shop-card__title">Women’s Clothing</h2>
+              <div class="shop-card__btns">
+                <button class="shop-card__button" type="button">New</button>
+                <button class="shop-card__button" type="button">Recommended</button>
+              </div>
+            </div>
+
+          <ul class="shop-card__list">
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products1.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products2.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products3.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products4.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products5.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products6.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products7.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products8.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products9.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products10.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products11.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="shop-card__item">
+              <article class="categories-card">
+                <img class="categories-card__img" src="images/women-products/women-products12.png" alt="">
+    
+                <div class="categories-card__content">
+                  <div class="categories-card__box">
+                    <h3 class="categories-card__title">Tees & T-Shirt</h3>
+                    <span class="categories-card__info">Explore Now!</span>
+                  </div>
+                  
+                  <span class="categories-card__cost">$123.00</span>
+                  <button class="categories-card__btn" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </li>
+          </ul>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-content">
+   <div class="container">
+    <h2 class="product-conten__title title">Clothing for Women Online in India</h2>
+    <h3 class="product-content__subtitle">Reexplore Women's Clothing Collection Online at Euphoria</h3>
+    <p class="product-content__text">
+         Women's Clothing – Are you searching for the best website to buy Clothing for Women online in India? Well, your search for the coolest and most stylish womens clothing ends here. From trendy Casual Womens Wear Online shopping to premium quality cotton women's apparel, Euphoria has closet of Women Collection covered with the latest and best designs of Women's Clothing Online. 
+    </p>
+
+    <p class="product-content__text">
+      Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear. 
+    </p>
+
+
+    <h4 class="product-content__subtitle">One-Stop Destination to Shop Every Clothing for Women: Euphoria</h4>
+    <p class="product-content__text">
+      Today, Clothing for Women is gaining more popularity above all. This is because gone are the days when women were used to carrying uncomfortable fashion. Today, a lady looks prettier when she is in Casual Womens Wear which is a comfortable outfit. Concerning this, Euphoria has a big fat range of Stylish Women's Clothing that would make her the winner wherever she goes. 
+    </p>
+
+    <p class="product-content__text">
+      Our collection of clothes for women will make you the trendsetter with an iconic resemblance of choice in Womens Wear. It is quite evident to say that there are very few Womens Clothing online stores where you can buy Western Wear for Women comprising the premium material and elegant design that you are always seeking for. Basically, 
+    </p>
+
+    <a class="product-content__link" href="#">See More</a>
+   </div>
+  </section>
+
+  <section class="cloth-price">
+    <div class="container">
+      <h2 class="cloth-price__title title">Buy Women's Clothing at Best Price</h2>
+ 
+      <table class="cloth-price__table" cellspacing="0">
+        <tr class="cloth-price__tr">
+          <th class="cloth-price__table-title">Women's Clothing</th>
+          <th class="cloth-price__table-title">
+           <span>Best Price</span></th> 
+        </tr>
+      
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="cloth-price__cost">₹1099</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Pick Any 4- Plain Womens Boxer Combo</td>
+          <td class="cloth-price__cost">₹1099</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Pick Any 4 - Women Plain Full Sleeve T-shirt Combo</td>
+          <td class="cloth-price__cost">₹1399</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Multicolor Checkered Long Casual Shirts for Women</td>
+          <td class="cloth-price__cost">₹499</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Pick Any 2: Plain Boxy Casual Shirts for Women Combo</td>
+          <td class="cloth-price__cost">₹799</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Blue Floral Anarkali Kurti</td>
+          <td class="cloth-price__cost">₹599</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Jade Black Narrow Cut Flexible Women Jeggings</td>
+          <td class="cloth-price__cost">₹998</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Mustard-yellow Solid Straight-Fit Women Pant</td>
+          <td class="cloth-price__cost">₹499</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Women Pants Combo - Pick Any 2</td>
+          <td class="cloth-price__cost">₹800</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Pista Green Solid Boxy Casual Shirts for Women</td>
+          <td class="cloth-price__cost">₹449</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Plain Burgundy Womens Boxer</td>
+          <td class="cloth-price__cost">₹349</td>
+        </tr>
+        <tr class="cloth-price__tr">
+          <td class="cloth-price__td">Striped Front Tie Casual Shirts for Women</td>
+          <td class="cloth-price__cost">₹449</td>
+        </tr>
+      </table>
+      
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+
+  <div class="footer__inner">
+     <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-title">Need Help</li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Track Order</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Returns & Refunds</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">FAQ's</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Career</a>
+          </li>
+        </ul>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-title">Need Help</li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Track Order</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Returns & Refunds</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">FAQ's</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Career</a>
+          </li>
+        </ul>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-title">Need Help</li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Track Order</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">Returns & Refunds</a>
+          </li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="#">FAQ's</a>
+          </li>
+        </ul>
+
+        <ul class="footer__nav-list">
+          <li class="footer__nav-title">Need Help</li>
+          <li class="footer__nav-item">
+             <a class="footer__nav-link" href="mailto:support@euphoria.in">support@euphoria.in</a>
+          </li>
+          <li class="footer__nav-item">
+             <address class="footer__nav-address">Eklingpura Chouraha, Ahmedabad Main Road</address>
+          </li>
+          <li class="footer__nav-item">
+            <address class="footer__nav-address">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</address>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__wrapper">
+        <ul class="footer__socials-list">
+          <li class="footer__socials-item">
+            <a class="footer__socials-link" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a class="footer__socials-link" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#inst"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a class="footer__socials-link" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a class="footer__socials-link" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#in"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__box-app">
+          <span class="footer__app-title">Download The App </span>
+             <div class="footer__app-links">
+              <a class="footer__app-link" href="#">
+                <img class="footer__app-img" src="images/icons/playmarket.svg" alt="">
+              </a>
+              <a class="footer__app-link" href="#">
+               <img class="footer__app-img" src="images/icons/appstore.svg" alt="">
+              </a>
+    
+             </div>     
+        </div>
+      </div>
+
+      <div class="footer__slide-toggle">
+       <span class="footer__categories" id="footer__categories">Popular Categories</span>
+      
+        <ul class="footer__categories-list" id="list">
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">
+              Categories For Men
+            </a>
+          </li>
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">
+              In The Limelight
+            </a>
+          </li>
+          <li class="footer__categories-item">
+            <a class="footer__categories-link" href="#">
+              Categories For Women
+            </a>
+          </li>
+        </ul>
+      </div>
+
+        <p class="footer__copyright">Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.</p>
+  </div>  
+</div>
+</footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

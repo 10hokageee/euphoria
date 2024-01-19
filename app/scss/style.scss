@@ -834,7 +834,7 @@
 }
 
 .women-product {
-padding-bottom: 100px;
+  padding-bottom: 100px;
 
   &__inner {
     display: flex;
@@ -849,6 +849,7 @@ padding-bottom: 100px;
   border-left: 1px solid #BEBCBD;
   max-width: 295px;
   width: 100%;
+  margin-right: 50px;
 
   &__name {
     color: #807D7E;
@@ -884,7 +885,7 @@ padding-bottom: 100px;
     &::before {
       transform: rotate(-45deg);
       right: 42px;
-      
+
     }
 
     &--active::before {
@@ -1152,4 +1153,227 @@ padding-bottom: 100px;
       margin-bottom: 18px;
     }
   }
+}
+
+.shop-card {
+  width: 100%;
+  padding-top: 50px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    color: #3F4646;
+    @extend %poppins-600;
+    font-size: 22px;
+    line-height: normal;
+  }
+
+  &__button {
+    color: #3F4646;
+    @extend %poppins-600;
+    font-size: 22px;
+    line-height: normal;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+}
+
+.product-content {
+  padding-bottom: 100px;
+
+  &__text {
+    color: #807D7E;
+    @extend %poppins-400;
+    font-size: 20px;
+    line-height: 33.5px;
+    letter-spacing: 0.4px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    color: #807D7E;
+    @extend %poppins-600;
+    font-size: 20px;
+    line-height: 33.5px;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    color: #807D7E;
+    font-size: 20px;
+    @extend %poppins-600;
+    line-height: 33.5px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.cloth-price {
+  padding-bottom: 100px;
+
+  &__table {
+    padding: 25px 66px 50px 84px;
+    border-radius: 12px;
+    background-color: #F6F6F6;
+  }
+
+  &__table-title {
+    width: 100%;
+    text-align: left;
+    color: #3C4242;
+    @extend %poppins-600;
+    font-size: 22px;
+    line-height: 33.5px;
+    letter-spacing: 0.48px;
+    padding: 25px 15px 25px 15px;
+    border-bottom: 1px solid #BEBCBD;
+
+    & span {
+      display: block;
+      width: 121px;
+    }
+
+    &:nth-child(2) {
+      padding-left: 30px;
+      border-left: 1px solid #BEBCBD;
+    }
+  }
+
+  &__box {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  &__tr {
+    transition: background-color 0.3s ease-in-out;
+
+
+    &:not(:first-child):hover {
+      background-color: #FFFAFA;
+    }
+  }
+
+
+  &__td {
+    padding: 25px 15px;
+    color: #807D7E;
+    @extend %poppins-400;
+    font-size: 24px;
+    line-height: 16px;
+    letter-spacing: 0.48px;
+  }
+
+  &__cost {
+    border-left: 1px solid #BEBCBD;
+    padding: 25px 15px;
+    color: #807D7E;
+    @extend %poppins-400;
+    font-size: 24px;
+    line-height: 16px;
+    letter-spacing: 0.48px;
+    text-align: center;
+  }
+}
+
+.product {
+  background-color: #F6F6F6;
+}
+
+.product-item {
+  display: flex;
+
+  &__slide {
+    width: 630px;
+    margin-right: 74px;
+  }
+}
+
+.product-slide {
+  display: flex;
+
+  &__wrapper {
+    align-self: center;
+  }
+
+  &__thumb {
+    width: 68px;
+    margin-right: 37px;
+  }
+
+  &__thumb-item {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 23px;
+
+    & img {
+      width: 68px;
+      height: 68px;
+      object-fit: cover;
+    }
+  }
+
+  &__big {
+    width: 520px;
+
+    & img {
+      width: 520px;
+      height: 785px;
+      object-fit: cover;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 38px;
+    transition: background-color 0.3s ease-in-out;
+
+    & svg {
+      width: 20px;
+      height: 10px;
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:focus {
+      background-color: #3C4242; 
+    }
+
+    &:focus svg {
+      fill: #fff;
+    }
+  }
+
+  .slick-next{
+    transform: scale(1, -1);
+    margin-top: 12px;
+  }
+
 }

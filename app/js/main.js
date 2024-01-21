@@ -30,6 +30,17 @@ $(function(){
   starSvg: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="star_purple500"><path id="Vector" d="M11.9053 16.8835L17.8777 20.4882L16.2928 13.6943L21.5693 9.12325L14.6209 8.53374L11.9053 2.12646L9.18967 8.53374L2.24121 9.12325L7.51779 13.6943L5.93288 20.4882L11.9053 16.8835Z"/></g></svg>'
  });
 
+ $('.product-content__grade-stars').rateYo({
+  starWidth: '22px',
+  readOnly: true,
+  spacing: "10px",
+  ratedFill: "#EDD146",
+  normalFill: "#BEBCBD",
+  halfStar: true,
+  numStars: 5,
+  starSvg: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="star_purple500"><path id="Vector" d="M11.9053 16.8835L17.8777 20.4882L16.2928 13.6943L21.5693 9.12325L14.6209 8.53374L11.9053 2.12646L9.18967 8.53374L2.24121 9.12325L7.51779 13.6943L5.93288 20.4882L11.9053 16.8835Z"/></g></svg>'
+ });
+
  $('.footer__slide-toggle').on('click', function(){
   $('.footer__categories-list').slideToggle('slow', function(){
 
@@ -101,6 +112,7 @@ $(function(){
     nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="images/sprite.svg#product-slide-arrow"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="images/sprite.svg#product-slide-arrow"></use></svg></button>'
   });
+
 
 });
 

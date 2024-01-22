@@ -76,6 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease-in-out;
 
     & svg {
       width: 20px;
@@ -83,11 +84,29 @@
       stroke: #807D7E;
       fill: transparent;
       stroke-width: 1.5px;
+      transition: stroke 0.3s ease-in-out;
     }
 
     &:not(:last-child) {
       margin-right: 12px;
     }
+
+    &:hover {
+      background-color: #8434E1;
+    }
+
+    &:hover svg {
+      stroke: #fff;
+    }
+
+    &--active {
+      background-color: #8434E1;
+
+      & svg {
+        stroke: #fff;
+      }
+    }
+
   }
 }
 
@@ -147,6 +166,12 @@
     border-radius: 8px;
     background-color: #FFF;
     display: inline-block;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #345EFF;
+      color: #fff;
+    }
   }
 
   .slick-arrow {
@@ -509,6 +534,12 @@
     @extend %poppins-600;
     line-height: normal;
     display: inline-block;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #3C4242;
+      color: #fff;
+    }
   }
 
   &__img {
@@ -738,11 +769,21 @@
     background-color: #F6F6F6;
     width: 37px;
     height: 37px;
+    transition: background-color 0.3s ease-in-out;
 
     & svg {
       width: 16px;
       height: 16px;
       fill: #2A2F2F;
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: #2A2F2F;
+    }
+
+    &:hover svg {
+      fill: #fff;
     }
   }
 
@@ -777,6 +818,7 @@
     padding: 30px 0;
     display: block;
     position: relative;
+    cursor: pointer;
 
     &::after,
     &::before {
@@ -1727,7 +1769,6 @@
 
   &__inner {
     display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 
@@ -1751,6 +1792,7 @@
     line-height: normal;
     position: relative;
     display: inline-block;
+    padding-bottom: 20px;
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -1758,6 +1800,21 @@
 
     &:not(:first-child) {
       padding-right: 35px;
+    }
+
+    &--active {
+      color: #3C4242;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 43px;
+        height: 2px;
+        background-color: #000;
+      }
     }
   }
 
@@ -1774,9 +1831,7 @@
     justify-content: center;
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
+    top: 4px;
 
     &--comments {
       background-color: #8A33FD;
@@ -1793,6 +1848,11 @@
     font-size: 16px;
     line-height: 25px;
     letter-spacing: 0.32px;
+    display: none;
+
+    &--active {
+      display: block;
+    }
   }
 
   &__list {
@@ -1911,6 +1971,59 @@
     align-self: flex-end;
     display: block;
   }
+
+  &__comments {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__comments-item {
+    width: 100%;
+    padding: 22px 24px;
+    width: 100%;
+    border-radius: 32px 32px 32px 0px;
+    background-color: #FFF;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 1px 6px 0px rgba(0, 0, 0, 0.20);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__comments-info {
+    padding-left: 70px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-image: url('../images/user-avatar/user-avatar1.png');
+    }
+  }
+
+  &__comments-username {
+    @extend %poppins-500;
+    color: #323232;
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: 0.44px;
+  }
+
+  &__comments-text {
+    color: #807D7E;
+    @extend %poppins-400;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.32px;
+  }
 }
 
 .similar-product {
@@ -1940,4 +2053,120 @@
   &__content {
     padding-top: 30px;
   }
+}
+
+.error {
+  text-align: center;
+  padding: 82px 0 100px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    max-width: 459px;
+  }
+
+  &__img {
+    display: inline;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 34px;
+    @extend %poppins-600;
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+
+  &__text {
+    color: #807D7E;
+    @extend %poppins-500;
+    font-size: 16px;
+    line-height: 124.7%;
+    letter-spacing: 0.32px;
+    margin-bottom: 42px;
+  }
+
+  &__link {
+    color: #FFF;
+    font-size: 18px;
+    @extend %poppins-600;
+    line-height: normal;
+    padding: 12px 40px;
+    background-color: #8A33FD;
+    border-radius: 8px;
+  }
+}
+
+.header-singup {
+  padding: 32px 0;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__label {
+    position: relative;
+    width: 185px;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      fill: #807D7E;
+      stroke-width: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 51px;
+    }
+  }
+
+  &__input {
+    color: #807D7E;
+    text-align: center;
+    @extend %poppins-400;
+    font-size: 18px;
+    line-height: normal;
+    border-radius: 8px;
+    background-color: #F6F6F6;
+    padding: 12px 48px 12px 80px;
+    border: none;
+    width: 255px;
+
+    &::placeholder {
+      color: #807D7E;
+      @extend %poppins-400;
+      font-size: 18px;
+      line-height: normal;
+    }
+  }
+
+  &__link {
+    color: #8A33FD;
+    @extend %poppins-500;
+    padding: 12px 48px;
+    font-size: 18px;
+    line-height: normal;
+    border-radius: 8px;
+    border: 1px solid #3C4242;
+
+    &--active {
+      background-color: #8A33FD;
+      color: #FFF;
+      border: 1px solid transparent;
+    }
+
+    &:not(:last-child) {
+      margin-right: 29px;
+    }
+  }
+}
+
+.singup {
+  min-height: 100vh;
 }

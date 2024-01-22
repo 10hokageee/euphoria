@@ -128,7 +128,28 @@ $(function(){
    $('.shop-card__list-recommended').addClass('shop-card__list-recommended--active')
    $('.shop-card__list').css('display', 'none')
 });
+
+$('.product-description__btn').on('click', function(){
+  $('.product-description__btn').removeClass('product-description__btn--active')
+  $(this).addClass('product-description__btn--active')
+})
+
+$('.btn-description').on('click', function(){
+  $('.product-description__comments').removeClass('product-description__comments--active')  
+  $('.product-description__text').addClass('product-description__text--active')
+})
+
+$('.btn-comment').on('click', function(){
+  $('.product-description__comments').addClass('product-description__comments--active')
+  $('.product-description__text').removeClass('product-description__text--active')
+})
+
+$('.categories-card__btn').on('click', function(){
+  $(this).toggleClass('categories-card__btn--active')
+})
+
 });
+
 
 
 const footerE = document.getElementById('footer__categories');
@@ -136,6 +157,10 @@ const footerE = document.getElementById('footer__categories');
 footerE.onclick = function() {
   footerE.classList.toggle('footer__categories--active')
 }
+
+
+
+
 
 
 

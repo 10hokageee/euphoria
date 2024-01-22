@@ -133,9 +133,17 @@ body {
     & svg {
       width: 20px;
       height: 20px;
-      stroke-width: 1px;
+      stroke-width: 1.5px;
       stroke: #3C4242;
       fill: transparent;
+    }
+
+    &--active {
+      background-color: #8A33FD;
+
+      & svg {
+        stroke: #fff;
+      }
     }
   }
 
@@ -145,10 +153,40 @@ body {
     flex-direction: column;
     display: flex;
   }
+
 }
 
 .filters__item {
   display: none;
 }
 
+.hover-link {
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+}
+
+.arrow-rotate {
+  transition: all 0.3s ease;
+
+  &:hover {
+    animation-name: rotate;
+    animation: rotate 1s linear infinite;
+  }
+
+  @keyframes rotate {
+
+    from {
+      transform: scale(0.7);
+    }
+
+    to {
+      transform: scale(1.4);
+    }
+
+  }
+}
 

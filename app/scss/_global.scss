@@ -68,12 +68,17 @@ body {
   &__img {
     border-radius: 10px;
     margin-bottom: 16px;
+    width: 100%;
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__box {
+    margin-right: 25px;
   }
 
   &__title {
@@ -132,6 +137,13 @@ body {
       stroke: #3C4242;
       fill: transparent;
     }
+  }
+
+  &__article {
+    max-width: 282px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
   }
 }
 

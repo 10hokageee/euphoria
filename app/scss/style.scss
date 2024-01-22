@@ -356,7 +356,7 @@
     &:nth-child(4) {
       grid-column: span 3;
       max-width: 610px;
-      padding: 45px 75px 45px 30px;
+      padding: 65px 75px 45px 30px;
 
       .commercial__list-content {
         margin-left: auto;
@@ -382,7 +382,7 @@
     &:nth-child(5) {
       grid-column: span 3;
       max-width: 610px;
-      padding: 45px 120px 45px 30px;
+      padding: 65px 120px 45px 30px;
 
       .commercial__list-content {
         margin-left: auto;
@@ -618,6 +618,7 @@
     border: 1.8px solid #BEBCBD;
     padding: 23px;
     max-width: 397px;
+    min-height: 369px;
   }
 
   &__user {
@@ -1188,10 +1189,27 @@
     display: flex;
   }
 
+  &__button {
+
+    &--active {
+      color: #8A33FD;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
+  }
+
+  &__list-recommended {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+
+    &--active {
+      display: grid;
+    }
   }
 }
 
@@ -1383,7 +1401,7 @@
   }
 }
 
-.product-content {
+.product-main {
   max-height: 572px;
 
   &__breadcrumbs {
@@ -1512,7 +1530,7 @@
     margin-left: 30px;
     margin-bottom: 10px;
 
-    &:checked+.product-content__checkbox {
+    &:checked+.product-main__checkbox {
       background-color: #3C4242;
       color: #fff;
       border: 1.5px solid transparent;
@@ -1565,7 +1583,7 @@
     height: 1px;
     overflow: hidden;
 
-    &:checked+.product-content__color-checkbox::after {
+    &:checked+.product-main__color-checkbox::after {
       border: 1.5px solid #000;
     }
   }
@@ -1892,5 +1910,34 @@
     letter-spacing: 0.44px;
     align-self: flex-end;
     display: block;
+  }
+}
+
+.similar-product {
+  padding-bottom: 100px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+    column-gap: 37px;
+  }
+
+  &__article {
+    max-width: 282px;
+    width: 100%;
+  }
+
+  &__img {
+    margin-bottom: 0;
+  }
+
+  &__list-title {
+    font-size: 14px;
+  }
+
+  &__content {
+    padding-top: 30px;
   }
 }

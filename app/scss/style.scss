@@ -2165,8 +2165,222 @@
       margin-right: 29px;
     }
   }
+
+  &__lang {
+
+    .jq-selectbox__select {
+      height: 24px;
+      padding: 0 36px 0 10px;
+      border: 1px solid transparent;
+      border-bottom-color: transparent;
+      border-radius: none;
+      background: transparent;
+      box-shadow: none;
+      color: #333;
+      text-shadow: none;
+      @extend %poppins-400;
+      font-size: 18px;
+      line-height: normal;
+      width: 254px;
+
+      .focused {
+        border: none;
+      }
+    }
+
+    .jq-selectbox__trigger {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px;
+      border-left: 1px solid transparent;
+    }
+
+    .jq-selectbox__trigger-arrow {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 0;
+      height: 0;
+      border-top: 5px solid #333;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+    }
+
+    .jq-selectbox__dropdown {
+      margin-top: 13px;
+    }
+  }
+
+
 }
 
 .singup {
   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 60px 0 42px 0;
+  
+  &__content {
+    max-width: 567px;
+    margin-left: auto;
+  }
+
+  &__title {
+    color: #333;
+    font-size: 34px;
+    @extend %poppins-600;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    color: rgba(102, 102, 102, 0.80);
+    font-size: 16px;
+    @extend %poppins-500;
+    line-height: normal;
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  &__btn-box {
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid #3C4242;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn-text {
+    padding-left: 32px;
+    position: relative;
+    color: #8A33FD;
+    text-align: center;
+    @extend %poppins-500;
+    font-size: 22px;
+    line-height: normal;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    &--google::after {
+      background-image: url('../images/icons/google.svg');
+    }
+
+    &--twitter::after {
+      background-image: url('../images/icons/twitter-form.svg');
+    }
+  }
+
+  &__form-name {
+    color: #3C4242;
+    @extend %poppins-400;
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__form-input {
+    border-radius: 8px;
+    border: 1px solid #3C4242;
+    width: 100%;
+    padding: 18px 20px;
+
+    &::placeholder {
+      color: #807D7E;
+      @extend %poppins-400;
+      font-size: 14px;
+      line-height: normal;
+    }
+
+
+    &:not(:last-child) {
+      margin-bottom: 39px;
+    }
+  }
+
+  &__form-text {
+    color: #807D7E;
+    font-size: 16px;
+    @extend %poppins-500;
+    line-height: normal;
+    margin-bottom: 33px;
+  }
+
+  &__form-btn {
+    border-radius: 8px;
+    background: #8A33FD;
+    padding: 16px 50px;
+    color: #FFF;
+    @extend %poppins-500;
+    font-size: 18px;
+    line-height: normal;
+    margin-top: 40px;
+  }
+
+  &__form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    width: 430px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__form-box {
+    position: relative;
+  }
+
+  &__form-check-text {
+    color: #807D7E;
+    @extend %poppins-500;
+    font-size: 18px;
+    line-height: normal;
+    text-decoration-line: underline;
+    padding-left: 28px;
+    display: block;
+  }
+
+  &__form-check-input {
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    left: 4px;
+    margin-right: 12px;
+
+    &:checked+.singup__form-check-checkbox {
+      background-image: url('../images/icons/check.svg');
+    }
+  }
+
+  &__form-check-checkbox {
+    border: 1px solid #3C4242;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    position: absolute;
+    margin-top: -8px;
+  }
 }

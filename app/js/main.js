@@ -114,6 +114,8 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="images/sprite.svg#product-slide-arrow"></use></svg></button>'
   });
 
+  $('.header-singup__lang').styler();
+
   $('.shop-card__button').on('click', function(){
     $('.shop-card__button').removeClass('shop-card__button--active')
     $(this).addClass('shop-card__button--active')

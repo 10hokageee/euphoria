@@ -40,9 +40,66 @@
 </header>
 
 <main class="main">
-  <section class="singup">
+  <section class="singup" style="background-image: url(images/singup-bg.png);">
     <div class="container">
+      <div class="singup__content">
+        <h1 class="singup__title">
+          Sign Up
+        </h1>
+        <span class="singup__subtitle">
+          Sign up for free to access to in any of our products 
+        </span>
 
+        <div class="singup__btn-box">
+
+          <button class="singup__btn">
+            <span class="singup__btn-text singup__btn-text--google">Continue With Google
+            </span>
+          </button>
+
+          <button class="singup__btn">
+            <span class="singup__btn-text singup__btn-text--twitter">Continue With Twitter    
+            </span>
+          </button>
+
+        </div>
+
+
+        <form class="singup__form" required action="#">
+          <label class="singup__form-label" for="email">
+            <span class="singup__form-name">Email Address</span>
+            <input required class="singup__form-input" type="email" name="email" placeholder="designer@gmail.com">
+            <span class="singup__form-error"></span>
+          </label>
+
+          <label class="singup__form-label" for="password">
+            <span class="singup__form-name">Password</span>
+            <input required class="singup__form-input" type="password" name="password" placeholder="designer@gmail.com">
+            <p class="singup__form-text">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+          </label>
+
+            <label class="singup__form-check">     
+            <div class="singup__form-box">
+              <input class="singup__form-check-input" required type="checkbox">
+              <span class="singup__form-check-checkbox"></span>
+            </div>
+            <span class="singup__form-check-text">Agree to our Terms of use and Privacy Policy</span>   
+            </label>
+
+
+
+            <label class="singup__form-check">
+              <div class="singup__form-box">
+                <input class="singup__form-check-input" required type="checkbox">
+                <span class="singup__form-check-checkbox"></span>
+            </div>
+              <span class="singup__form-check-text">Subscribe to our monthly newsletter</span>
+            </label>
+ 
+
+          <button class="singup__form-btn">Sign Up</button>
+        </form>
+      </div>
     </div>
   </section>
 </main>

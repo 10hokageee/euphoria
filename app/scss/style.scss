@@ -2220,7 +2220,7 @@
   background-repeat: no-repeat;
   background-position: left;
   padding: 60px 0 42px 0;
-  
+
   &__content {
     max-width: 567px;
     margin-left: auto;
@@ -2287,6 +2287,13 @@
     }
   }
 
+  &__form-label {
+    height: 127px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 33px;
+  }
+
   &__form-name {
     color: #3C4242;
     @extend %poppins-400;
@@ -2302,6 +2309,7 @@
     border: 1px solid #3C4242;
     width: 100%;
     padding: 18px 20px;
+    margin-bottom: 10px;
 
     &::placeholder {
       color: #807D7E;
@@ -2309,11 +2317,13 @@
       font-size: 14px;
       line-height: normal;
     }
+  }
 
-
-    &:not(:last-child) {
-      margin-bottom: 39px;
-    }
+  &__form-error {
+    color: #EE1D52;
+    @extend %poppins-400;
+    font-size: 16px;
+    line-height: normal;
   }
 
   &__form-text {
@@ -2321,7 +2331,6 @@
     font-size: 16px;
     @extend %poppins-500;
     line-height: normal;
-    margin-bottom: 33px;
   }
 
   &__form-btn {
@@ -2359,6 +2368,7 @@
     text-decoration-line: underline;
     padding-left: 28px;
     display: block;
+
   }
 
   &__form-check-input {
@@ -2382,5 +2392,166 @@
     border-radius: 4px;
     position: absolute;
     margin-top: -8px;
+  }
+}
+
+.login {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 695px 956px;
+  min-height: 100vh;
+  padding: 60px 0 70px 0;
+
+  &__content {
+    max-width: 568px;
+    margin-left: auto;
+  }
+
+  &__title {
+    color: #333;
+    @extend %poppins-600;
+    font-size: 34px;
+    line-height: normal;
+    letter-spacing: 0.68px;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid #3C4242;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn-text {
+    padding-left: 32px;
+    position: relative;
+    color: #8A33FD;
+    text-align: center;
+    @extend %poppins-500;
+    font-size: 22px;
+    line-height: normal;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    &--google::after {
+      background-image: url('../images/icons/google.svg');
+    }
+
+    &--twitter::after {
+      background-image: url('../images/icons/twitter-form.svg');
+    }
+  }
+
+  &__btn-box {
+    margin-bottom: 50px;
+  }
+
+  &__border {
+    text-transform: uppercase;
+    color: #666;
+    @extend %poppins-400;
+    font-size: 18px;
+    line-height: normal;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-bottom: 50px;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: rgba(102, 102, 102, 0.25);
+      width: 248px;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      left: 0;
+    }
+
+    &::before {
+      right: 0;
+    }
+  }
+
+  &__form-label {
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form-text {
+    color: #3C4242;
+    @extend %poppins-400;
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__form-input {
+    border-radius: 8px;
+    border: 1px solid #3C4242;
+    padding: 18px 20px;
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__form-link {
+    color: #3C4242;
+    font-size: 16px;
+    line-height: normal;
+    text-decoration-line: underline;
+    align-self: end;
+    margin-top: 10px;
+  }
+
+  &__form-btn {
+    color: #FFF;
+    @extend %poppins-500;
+    font-size: 18px;
+    line-height: normal;
+    padding: 16px 57px;
+    background-color: #8A33FD;
+    border-radius: 8px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+
+  &__form-singup {
+    color: #3C4242;
+    font-size: 16px;
+    @extend %poppins-400;
+    line-height: normal;
+    display: block;
+
+    & a {
+      text-decoration-line: underline;
+    }
   }
 }

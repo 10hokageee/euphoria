@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euphoria</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  
+<header class="header-singup">
+  <div class="container">
+    <nav class="header-singup__nav">
+      <a class="header-singup__logo" href="#">
+        <img class="logo" src="images/logo.svg" alt="">
+      </a>
+      <form class="header-singup__form" action="#">
+        <label class="header-singup__label">
+          <svg>
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          <input class="header-singup__input" placeholder="Search" type="search">
+        </label>
+      </form>
+
+      <select class="header-singup__lang">
+        <option value="1">English (united States)</option>
+        <option value="2">Ru</option>
+        <option value="3">Ua</option>
+        <option value="4">De</option>
+      </select>
+
+      <div class="header-singup__links">
+        <a class="header-singup__link header-singup__link--active" href="#">Login</a>
+        <a class="header-singup__link" href="#">Sign Up</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <section class="login" style="background-image: url(images/login-bg.png);">
+    <div class="container">
+      <div class="login__content">
+        <h1 class="login__title">
+          Sign In Page
+        </h1>
+
+        <div class="login__btn-box">
+
+          <button class="login__btn">
+            <span class="login__btn-text login__btn-text--google">Continue With Google
+            </span>
+          </button>
+
+          <button class="login__btn">
+            <span class="login__btn-text login__btn-text--twitter">Continue With Twitter    
+            </span>
+          </button>
+
+        </div>
+
+        <span class="login__border">OR</span>
+
+        <form class="login__form" required action="#">
+        <label class="login__form-label" for="username">
+          <span class="login__form-text">User name or email address</span> 
+          <input class="login__form-input" required type="email" name="username">
+        </label>
+
+        <label class="login__form-label" for="username">
+          <span class="login__form-text">Password</span> 
+          <input class="login__form-input" required type="password" name="username">
+          <a class="login__form-link" href="#">Forget your password</a>
+        </label>
+
+          <button class="login__form-btn">Sign Up</button>
+          <span class="login__form-singup">Don’t have an account? 
+            <a href="#">Sign up </a> </span>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>
